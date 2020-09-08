@@ -43,7 +43,7 @@ public class TCPConnection extends Thread {
 
 			while (true) {
 				System.out.println("Escribe el comando :3");
-				String msg = sc.nextLine() + "\n";
+				String msg = sc.nextLine();
 				bw.write(msg);
 				bw.flush();
 				if(msg.equals("rtt")) {
