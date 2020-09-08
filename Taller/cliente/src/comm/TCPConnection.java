@@ -46,7 +46,7 @@ public class TCPConnection extends Thread {
 				String msg = sc.nextLine() + "\n";
 				bw.write(msg);
 				bw.flush();
-				if(msg.equals("rtt")||msg.equals("speed")) {
+				if(msg.equals("rtt")) {
 					long tiempo1 = System.nanoTime();
 					byte[] p = new byte[1024];
 					String p1024 = new String(p);
@@ -57,10 +57,10 @@ public class TCPConnection extends Thread {
 					long tiempo2 = System.nanoTime();
 					if(res.length()==1024) {
 						long trtt = tiempo2-tiempo1;
-						System.out.println("servidor responde");
+						System.out.println("servidor responde :3");
 						listener.OnMessage("tiempo RTT : " + trtt+ " ns ");
 					}
-				}else if(msg.equalsIgnoreCase("speed" + "\n")) {
+				}else if(msg.equalsIgnoreCase("speed")) {
 					long t1 = System.currentTimeMillis();
 					byte[] p = new byte[8192];
 					String p8192 = new String(p);

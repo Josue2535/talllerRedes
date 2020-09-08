@@ -46,10 +46,9 @@ public class TCPConnection extends Thread {
 			BufferedWriter bw = new BufferedWriter(osw);
 
 			while (true) {
-				System.out.println("Escribe el comando :3");
-				String msg = br.readLine() + "\n";
-				bw.write(msg);
-				bw.flush();
+				
+				String msg = br.readLine();
+				
 				if (msg.equals("rtt") || msg.equals("speed")) {
 					String p1024 = br.readLine() + "\n";
 					System.out.println(p1024);
