@@ -44,7 +44,7 @@ public class TCPConnection extends Thread {
 			while (true) {
 				System.out.println("Escribe el comando :3");
 				String msg = sc.nextLine();
-				bw.write(msg);
+				bw.write(msg+"\n");
 				bw.flush();
 				if(msg.equals("rtt")) {
 					long tiempo1 = System.nanoTime();

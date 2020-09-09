@@ -9,10 +9,6 @@ public class Main {
 		
 		Application app = new Application();
 		app.init();
-	
-		
-		while(true) {}
-
 	}
 
 }
